@@ -30,3 +30,4 @@ class AlimentoGatoSerializer(serializers.ModelSerializer):
     class Meta:
         model = AlimentoGato
         fields = ['id', 'alimento', 'marca', 'sabor']
+
