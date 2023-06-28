@@ -24,10 +24,10 @@ class AlimentoMascotaSerializer(serializers.ModelSerializer):
 class AlimentoPerroSerializer(serializers.ModelSerializer):
     class Meta:
         model = AlimentoPerro
-        fields = ['id', 'alimento', 'marca', 'sabor']
+        fields = ['id', 'nombre', 'marca', 'descripcion', 'precio','imagenURL', 'cantidad']
 
 class AlimentoGatoSerializer(serializers.ModelSerializer):
     class Meta:
         model = AlimentoGato
-        fields = ['id', 'alimento', 'marca', 'sabor']
+        fields = ['id', 'nombre', 'marca', 'descripcion', 'precio','imagenURL', 'cantidad']
 

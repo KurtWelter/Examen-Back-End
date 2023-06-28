@@ -20,12 +20,19 @@ class AlimentoMascota(models.Model):
 
 class AlimentoPerro(models.Model):
     id = models.AutoField(primary_key=True)
-    alimento = models.ForeignKey(AlimentoMascota, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=50)
     marca = models.CharField(max_length=50, choices=[('Marca1', 'Marca1'), ('Marca2', 'Marca2'), ('Marca3', 'Marca3'), ('Marca4', 'Marca4')])
-    sabor = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=50)
+    precio = models.IntegerField()
+    imagenURL = models.CharField(max_length=150)
+    cantidad = models.IntegerField()
 
 class AlimentoGato(models.Model):
     id = models.AutoField(primary_key=True)
-    alimento = models.ForeignKey(AlimentoMascota, on_delete=models.CASCADE)
+    nombre = models.CharField( max_length=50)
     marca = models.CharField(max_length=50, choices=[('Marca1', 'Marca1'), ('Marca2', 'Marca2'), ('Marca3', 'Marca3'), ('Marca4', 'Marca4')])
-    sabor = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=50)
+    precio = models.IntegerField()
+    imagenURL = models.CharField(max_length=150)
+    cantidad = models.IntegerField()
+
