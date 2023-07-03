@@ -7,6 +7,11 @@ class Usuario(models.Model):
     correo = models.CharField(max_length=100, unique=True)
     contrasena = models.CharField(max_length=100)
 
+class InicioSesion(models.Model):
+    id = models.AutoField(primary_key=True)
+    correo = models.CharField(max_length=100, unique=True)
+    contrasena = models.CharField(max_length=100)
+
 class Sesion(models.Model):
     id = models.AutoField(primary_key=True)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)

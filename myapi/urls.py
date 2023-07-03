@@ -10,6 +10,7 @@ router.register(r'alimentos-mascotas', AlimentoMascotaViewSet)
 router.register(r'alimentos-perros', AlimentoPerroViewSet)
 router.register(r'alimentos-gatos', AlimentoGatoViewSet)
 
+
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),

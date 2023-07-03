@@ -5,11 +5,17 @@ from .models import Sesion
 from .models import AlimentoMascota
 from .models import AlimentoPerro
 from .models import AlimentoGato
+from .models import InicioSesion
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
         fields = ['id', 'nombre', 'apellido', 'correo', 'contrasena']
+
+class InicioSesionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InicioSesion
+        fields = ['id', 'correo', 'contrasena']       
 
 class SesionSerializer(serializers.ModelSerializer):
     class Meta:
